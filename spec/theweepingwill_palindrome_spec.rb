@@ -29,5 +29,13 @@ it "mixed case palindrome test" do
   expect("Able was I ere I saw Elba".palindrome?).to eq(true)
 end
 
+it "is not an empty string" do 
+  expect("".palindrome?).to eq(false)
+end
+
+it "is not a space" do 
+  expect(" ".palindrome?).to eq(false)
+end
+
 
 end
