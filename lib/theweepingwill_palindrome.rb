@@ -6,22 +6,18 @@ require_relative "theweepingwill_palindrome/version"
 
 module TheweepingwillPalindrome
 #Returns true if a string is a palindrome, else it returns false
-  def palindrome? 
-    if pc == ""
-       false
-    else
-       pc == pc.reverse
-     end
-  end 
- 
+def palindrome? 
+ pc.empty? == false && pc == pc.reverse
+end 
 
-  private
+
+private
 
 #PC = processes content for 'palindrome?' usage
-  def pc 
-    self.to_s.downcase.gsub(/\W+/, "")
-  end
-  end
+def pc 
+  self.to_s.downcase.gsub(/\W+/, "")
+end
+end
 
 #Adds proccessor and palindrome methods to the String class
 class String
